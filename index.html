@@ -6,32 +6,60 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Tremendous Words Hangman</title>
+	<title>POTUS Hangman Game</title>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- My stylesheet -->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
-	<!--My javascript -->
-	<script src="assets/javascript/game.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 
-<h1>Does POTUS really have the best words?</h1>
-<h3>Play a classic game of hangman to find out...</h3>
-<br>
-<p id="hangman"></p>
-<form name="form">
-	<input name="guessForm" type="text" size="12" maxlength="1">
-	<input class="btn btn-default" type="submit" value="Submit guess!" onClick="checkLetter()">
-</form>
-<br>
+	<div class="container">
+		<div class="jumbotron">
+			<h2>Does POTUS really have the best words?</h2>
+			<p>Find out by guessing the word below!</p>
+		</div>
 
-<p id="guessesLeft">Guesses remaining:</p>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Word to Guess</h3>
+		</div>
+		<div class="panel-body">
+			<h2 id="wordToGuess">_ _ _ _ _ _</h2>
+		</div>
+	</div>
 
-<p id="wrongLetters">Wrong letters:</p>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Wrong guesses: <span id="wrongGuesses">0</span>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Guesses left: <span id="guessesLeft">0</span>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Wins: <span id="winCounter">0</span>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Losses: <span id="lossCounter">0</span>
+		</div>
+	</div>
+	</div>
+
+<!--My javascript file -->
+<script src="assets/javascript/newgame.js" type="text/javascript"></script>
+
 
 </body>
 
